@@ -42,4 +42,6 @@ def login(request):
         return redirect('/#')
 
 
-
+def logout(request):
+    auth.logout(request)
+    return redirect('/#')

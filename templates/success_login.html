@@ -6,6 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Welcome user {{name}}</h1>
+    <h1>Welcome user {{ user.email }}</h1>
+    
+    <form action="/logout" method="post">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+    </form>
 </body>
 </html>
